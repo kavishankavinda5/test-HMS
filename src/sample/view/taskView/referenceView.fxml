@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="850.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.taskControllers.ReferenceViewController">
+   <children>
+      <AnchorPane prefHeight="341.0" prefWidth="850.0">
+         <children>
+            <Label alignment="CENTER" layoutX="327.0" layoutY="33.0" prefHeight="42.0" prefWidth="195.0" text="REFERENCES" AnchorPane.leftAnchor="327.0" AnchorPane.rightAnchor="328.0">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="153.0" layoutY="185.0" prefHeight="20.0" prefWidth="129.0" text="Reference Type">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="referenceView_dropDown" layoutX="283.0" layoutY="182.0" prefHeight="26.0" prefWidth="365.0" promptText="Select" />
+            <JFXTextField fx:id="referenceView_AVEDreference" layoutX="283.0" layoutY="238.0" prefHeight="42.0" prefWidth="366.0" style="-fx-background-color: #fbf6f0;" unFocusColor="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="500.0" prefHeight="200.0" prefWidth="850.0" style="-fx-background-color: white;" />
+      <AnchorPane layoutX="7.0" layoutY="342.0" prefHeight="82.0" prefWidth="850.0" style="-fx-background-color: f3f2da;">
+         <children>
+            <HBox layoutX="172.0" layoutY="30.0" prefHeight="26.0" prefWidth="518.0">
+               <children>
+                  <JFXButton fx:id="referenceView_add" layoutX="90.0" layoutY="10.0" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #0e49b5;" text="Add" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="referenceView_update" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #009933;" text="Update" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="referenceView_delete" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #cc0000;" text="Delete" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="referenceView_reset" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: Gray;" text="Reset" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="referenceView_table" layoutX="100.0" layoutY="434.0" prefHeight="264.0" prefWidth="680.0" style="-fx-background-color: e8e8e8;" />
+   </children>
+</AnchorPane>

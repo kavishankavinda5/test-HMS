@@ -1,0 +1,2 @@
+1~2021-06-03~199912345678~Kamal~Meet Patient~0771234567~MALE~Nothing~00:26~null~true~false
+2~2021-07-15~991234567v~Amala~Meet Patient~0112345678~FEMALE~Nothing here~01:01~null~true~false

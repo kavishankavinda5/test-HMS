@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.taskControllers.UserViewController">
+   <children>
+      <AnchorPane layoutX="-2.0" layoutY="456.0" prefHeight="44.0" prefWidth="850.0" style="-fx-background-color: f3f2da;">
+         <children>
+            <HBox layoutX="127.0" layoutY="8.0" prefHeight="26.0" prefWidth="596.0">
+               <children>
+                  <JFXButton fx:id="userView_addUser" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #1e90ff;" text="Add" textFill="WHITE" />
+                  <JFXButton fx:id="userView_updateUser" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #009933;" text="Update" textFill="WHITE" />
+                  <JFXButton fx:id="userView_deleteUser" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #cc0000;" text="Delete" textFill="WHITE" />
+                  <JFXButton fx:id="userView_viewAll" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: gray;" text="View All" textFill="WHITE" />
+                  <JFXButton fx:id="userView_reset" prefHeight="26.0" prefWidth="120.0" style="-fx-background-color: #ff8080;" text="Reset" textFill="WHITE" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <Line endX="185.0" endY="-104.0" layoutX="643.0" layoutY="560.0" startX="-623.0" startY="-104.0" stroke="#d9d9d9" />
+      <AnchorPane layoutX="-2.0" prefHeight="454.0" prefWidth="850.0" style="-fx-background-color: white;">
+         <children>
+            <Label alignment="CENTER" layoutX="21.0" layoutY="10.0" prefHeight="44.0" prefWidth="146.0" text="USER DETAILS" textFill="#4f5b62">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="userView_label_name" layoutX="176.0" layoutY="31.0" opacity="0.0" prefHeight="1.0" prefWidth="18.0">
+               <font>
+                  <Font size="5.0" />
+               </font></Label>
+            <Label layoutX="155.0" layoutY="46.0" prefHeight="21.0" prefWidth="106.0" text="Person Details">
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="15.0" />
+               </font>
+            </Label>
+            <Line endX="-502.10003662109375" endY="-471.0" layoutX="1192.0" layoutY="743.0" startX="-566.5" startY="-471.0" stroke="#d9d9d9" />
+            <Label layoutX="521.0" layoutY="49.0" text="Patient Details">
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="15.0" />
+               </font>
+            </Label>
+            <Line endX="-41.70001220703125" endY="-468.0" layoutX="564.0" layoutY="635.0" startX="-143.70001220703125" startY="-468.0" stroke="#d9d9d9" />
+            <Label layoutX="528.0" layoutY="158.0" text="Staff Details">
+               <font>
+                  <Font name="Bookshelf Symbol 7" size="15.0" />
+               </font>
+            </Label>
+            <Line endX="-178.69998168945312" endY="-468.0" layoutX="690.0" layoutY="527.0" opacity="0.57" startX="-269.70001220703125" startY="-468.0" stroke="#d9d9d9" />
+            <Line endX="207.00006103515625" endY="-322.0" layoutX="477.0" layoutY="488.0" startX="137.29998779296875" startY="-322.0" stroke="#d9d9d9" />
+            <Line endX="-362.9000244140625" endY="-458.0" layoutX="865.0" layoutY="730.0" startX="-439.0999755859375" startY="-458.0" stroke="#d9d9d9" />
+            <Label layoutX="512.0" layoutY="262.0" text=" Medical Officer">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="userView_searchButton" layoutX="747.0" layoutY="17.0" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #1e90ff;" text="search" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/icons/icons8-search-512.png" />
+                     </image>
+                  </ImageView>
+               </graphic></JFXButton>
+            <Line endX="-124.70001220703125" endY="-467.5" layoutX="509.0" layoutY="527.0" startX="-244.29998779296875" startY="-467.5" stroke="#d9d9d9" />
+            <Line endX="186.70001220703125" endY="-467.0" layoutX="500.0" layoutY="526.0" startX="123.699951171875" startY="-467.0" stroke="#d9d9d9" />
+            <Line endX="157.0" endY="-561.0" layoutX="648.0" layoutY="568.0" startX="-648.0" startY="-561.0" stroke="#d9d9d9" />
+            <Line endX="-435.1000061035156" endY="-478.0" layoutX="575.0" layoutY="535.0" startX="-545.0999755859375" startY="-478.0" stroke="#d9d9d9" />
+            <Label layoutX="247.0" layoutY="19.0" prefHeight="22.0" prefWidth="54.0" text="User Type" />
+            <JFXComboBox fx:id="userView_userTypeDrop" layoutX="308.0" layoutY="17.0" prefHeight="26.0" prefWidth="215.0" promptText="usertype" style="-fx-background-color: e8e8e8;" />
+            <TextField fx:id="userView_searchField" layoutX="573.0" layoutY="17.0" prefHeight="26.0" prefWidth="164.0" promptText="ID Number" />
+            <GridPane layoutX="41.0" layoutY="46.0" prefHeight="397.0" prefWidth="334.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.20001220703125" minWidth="10.0" prefWidth="86.20001220703125" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.79998779296875" minWidth="10.0" prefWidth="247.79998779296875" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="95.20001068115235" minHeight="7.600012207031249" prefHeight="75.99999084472657" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="89.6" minHeight="0.0" prefHeight="24.799990844726565" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="61.39999999999999" minHeight="10.0" prefHeight="48.80000915527343" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="40.599999999999994" minHeight="10.0" prefHeight="40.599999999999994" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="56.79998168945312" minHeight="10.0" prefHeight="21.400000000000006" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="89.19999999999999" minHeight="0.0" prefHeight="81.59999389648439" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="58.39999999999998" minHeight="0.0" prefHeight="40.800006103515614" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="65.60001220703123" minHeight="10.0" prefHeight="37.400006103515636" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Name" />
+                  <JFXTextField fx:id="userView_name" focusColor="DODGERBLUE" prefHeight="26.0" prefWidth="270.0" promptText="Name" style="-fx-background-color: e8e8e8;" GridPane.columnIndex="1" />
+                  <Label text="Gender" GridPane.rowIndex="1" />
+                  <JFXComboBox fx:id="userView_gender" prefHeight="26.0" prefWidth="126.0" promptText="Gender" style="-fx-background-color: e8e8e8;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Marital" GridPane.rowIndex="2" />
+                  <JFXComboBox fx:id="userView_marital" prefHeight="25.0" prefWidth="126.0" promptText="Marital" style="-fx-background-color: e8e8e8;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Date Of Birth" GridPane.rowIndex="3" />
+                  <DatePicker fx:id="userView_dob" prefHeight="26.0" prefWidth="190.0" promptText="MM/DD/YYYY" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label text="Phone No" GridPane.rowIndex="4" />
+                  <JFXTextField fx:id="userView_phoneNum" focusColor="DODGERBLUE" prefHeight="26.0" prefWidth="248.0" promptText="Phone No" style="-fx-background-color: e8e8e8;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label text="NIC No" GridPane.rowIndex="5" />
+                  <JFXTextField fx:id="userView_NIC" focusColor="DODGERBLUE" prefHeight="26.0" prefWidth="270.0" promptText="NIC No" style="-fx-background-color: e8e8e8;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label text="Address" GridPane.rowIndex="6" />
+                  <JFXTextArea fx:id="userView_address" prefColumnCount="20" prefHeight="20.0" prefWidth="248.0" style="-fx-background-color: e8e8e8;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label fx:id="userView_userNameLable" text="User Name" GridPane.rowIndex="7" />
+                  <JFXTextField fx:id="userView_userName" focusColor="DODGERBLUE" prefHeight="26.0" prefWidth="248.0" promptText="username" style="-fx-background-color: e8e8e8;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Label text="Password" GridPane.rowIndex="8" />
+                  <JFXPasswordField fx:id="userView_userPassword" prefHeight="26.0" prefWidth="270.0" promptText="password" style="-fx-background-color: e8e8e8;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="433.0" layoutY="66.0" prefHeight="74.0" prefWidth="248.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.20001220703125" minWidth="10.0" prefWidth="76.8" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.39999999999998" minWidth="10.0" prefWidth="170.39999999999998" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="51.000006103515624" minHeight="10.0" prefHeight="40.599996948242186" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="50.99999084472656" minHeight="10.0" prefHeight="42.20000305175781" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXComboBox fx:id="userView_bloodGroup" prefHeight="26.0" prefWidth="187.0" promptText="Blood Group" style="-fx-background-color: e8e8e8;" GridPane.columnIndex="1" />
+                  <Label text="Blood Group" />
+                  <JFXTextField fx:id="userView_allergies" focusColor="DODGERBLUE" prefHeight="26.0" prefWidth="187.0" promptText="Allergies" style="-fx-background-color: e8e8e8;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Allergies" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="434.0" layoutY="176.0" prefHeight="74.0" prefWidth="248.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.999951171875" minWidth="10.0" prefWidth="73.59996337890625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.20001220703125" minWidth="10.0" prefWidth="173.60003662109375" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="32.599981689453124" minHeight="10.0" prefHeight="31.799993896484374" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="43.000006103515624" minHeight="10.0" prefHeight="43.000006103515624" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Staff ID" />
+                  <JFXTextField fx:id="userView_staffID" focusColor="DODGERBLUE" prefHeight="26.0" prefWidth="156.0" promptText="Staff ID" style="-fx-background-color: e8e8e8;" GridPane.columnIndex="1" />
+                  <JFXTextField fx:id="userView_staffEmail" focusColor="DODGERBLUE" prefHeight="26.0" prefWidth="187.0" promptText="Staff Email" style="-fx-background-color: e8e8e8;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label text="Staff Email" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="433.0" layoutY="278.0" prefHeight="74.0" prefWidth="248.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="138.39996337890625" minWidth="10.0" prefWidth="87.99998779296875" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.19996337890626" minWidth="10.0" prefWidth="160.80001220703127" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Specialty Area" />
+                  <JFXComboBox fx:id="userView_speciality" prefHeight="26.0" prefWidth="187.0" promptText="Specialty Area" style="-fx-background-color: e8e8e8;" GridPane.columnIndex="1" />
+                  <Label text="Date Of Joining" GridPane.rowIndex="1" />
+                  <DatePicker fx:id="userView_staffdoj" prefHeight="26.0" prefWidth="165.0" promptText="MM/DD/YYYY" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane layoutX="431.0" layoutY="361.0" prefHeight="92.0" prefWidth="415.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.7999755859375" minWidth="0.0" prefWidth="91.20002441406251" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="322.99997558593753" minWidth="10.0" prefWidth="322.99997558593753" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="41.60001220703125" minHeight="10.0" prefHeight="29.60001220703125" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="41.60001220703125" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="32.79998779296875" minHeight="0.0" prefHeight="32.79998779296875" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="32.79998779296875" minHeight="10.0" prefHeight="32.79998779296875" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXButton fx:id="userView_UploadPhoto" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: silver;" text="Upload  " GridPane.columnIndex="1" />
+                  <Label text="Photograph" />
+                  <Label text="Document" GridPane.rowIndex="2" />
+                  <Label fx:id="userView_UploadPhoto_Path" prefHeight="22.0" prefWidth="323.0" textFill="#3300ff" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userView_UploadFile_Path" prefHeight="22.0" prefWidth="323.0" textFill="#3300ff" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="7.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane prefHeight="26.0" prefWidth="208.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <JFXButton fx:id="userView_UploadFile" prefHeight="26.0" prefWidth="110.0" style="-fx-background-color: silver;" text="Upload  File" />
+                        <JFXButton fx:id="openDocument" layoutX="122.0" layoutY="-1.0" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #00eeff;" text="open" />
+                        <Label fx:id="noDocument" alignment="CENTER" layoutX="122.0" layoutY="-1.0" prefHeight="26.0" prefWidth="80.0" text="No Document" textFill="RED" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </GridPane>
+            <Pane layoutX="684.0" layoutY="65.0" prefHeight="183.0" prefWidth="157.0">
+               <children>
+                  <ImageView fitHeight="130.0" fitWidth="130.0" layoutX="18.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../assets/profilePics/default-profile-picture.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="52.0" layoutY="90.0" prefHeight="30.0" prefWidth="75.0" text="EMPTY">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <HBox fx:id="profile_userPhoto" layoutX="18.0" layoutY="14.0" prefHeight="130.0" prefWidth="130.0" />
+                  <Label alignment="CENTER" layoutX="18.0" layoutY="144.0" prefHeight="26.0" prefWidth="130.0" style="-fx-background-color: #11999e;" text="User Photo" textFill="WHITE" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <TabPane fx:id="userView_mainTabPane" layoutX="12.0" layoutY="496.0" prefHeight="194.0" prefWidth="826.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="patientTable_Tab" text="Patient Table">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="userV_PatientTable" layoutY="1.0" prefHeight="200.0" prefWidth="838.0">
+                          <columns>
+                            <TableColumn fx:id="pTable_name" prefWidth="102.39999389648438" text="Name" />
+                            <TableColumn fx:id="pTable_gender" prefWidth="71.20001220703125" text="Gender" />
+                              <TableColumn fx:id="pTable_marital" prefWidth="81.5999755859375" text="Marital" />
+                              <TableColumn fx:id="pTable_dob" prefWidth="72.79998779296875" text="DOB" />
+                              <TableColumn fx:id="pTable_phone" prefWidth="87.20001220703125" text="Phone" />
+                              <TableColumn fx:id="pTable_nic" prefWidth="62.4000244140625" text="NIC" />
+                              <TableColumn fx:id="pTable_address" minWidth="0.0" prefWidth="81.5999755859375" text="Address" />
+                              <TableColumn fx:id="pTable_UserName" prefWidth="80.79998779296875" text="UserName" />
+                              <TableColumn fx:id="pTable_bloodGroup" prefWidth="78.40008544921875" text="BloodGroup" />
+                              <TableColumn fx:id="pTable_Allergies" prefWidth="95.2000732421875" text="Allergies" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="medical_tab" text="Medical Officer">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="medicalOfficer_mainTable" prefHeight="200.0" prefWidth="850.0">
+                           <columns>
+                              <TableColumn fx:id="Mtable_staffID" prefWidth="102.39999389648438" text="StaffID" />
+                              <TableColumn fx:id="Mtable_staffName" prefWidth="102.39999389648438" text="Name" />
+                              <TableColumn fx:id="Mtable_staffGender" prefWidth="71.20001220703125" text="Gender" />
+                              <TableColumn fx:id="Mtable_staffMarital" prefWidth="81.5999755859375" text="Marital" />
+                              <TableColumn fx:id="Mtable_staffDOB" prefWidth="72.79998779296875" text="DOB" />
+                              <TableColumn fx:id="Mtable_staffPhone" prefWidth="87.20001220703125" text="Phone" />
+                              <TableColumn fx:id="Mtable_staffNIC" prefWidth="62.4000244140625" text="NIC" />
+                              <TableColumn fx:id="Mtable_address" minWidth="0.0" prefWidth="81.5999755859375" text="Address" />
+                              <TableColumn fx:id="Mtable_userName" prefWidth="80.79998779296875" text="UserName" />
+                              <TableColumn fx:id="Mtable_email" prefWidth="80.79998779296875" text="Email" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="admin_tab" text="Admin">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="admin_mainTable" prefHeight="200.0" prefWidth="850.0">
+                           <columns>
+                              <TableColumn fx:id="Atable_name" prefWidth="102.39999389648438" text="Name" />
+                              <TableColumn fx:id="A_tableGender" prefWidth="71.20001220703125" text="Gender" />
+                              <TableColumn fx:id="Atable_marital" prefWidth="81.5999755859375" text="Marital" />
+                              <TableColumn fx:id="Atable_DOB" prefWidth="72.79998779296875" text="DOB" />
+                              <TableColumn fx:id="Atable_phone" prefWidth="87.20001220703125" text="Phone" />
+                              <TableColumn fx:id="Atable_NIC" prefWidth="109.5999755859375" text="NIC" />
+                              <TableColumn fx:id="Atable_address" minWidth="0.0" prefWidth="80.800048828125" text="Address" />
+                              <TableColumn fx:id="Atable_userName" prefWidth="157.5999755859375" text="UserName" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="reception_Tab" text="Receptionist">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="receptiontable_mainTable" prefHeight="200.0" prefWidth="850.0">
+                           <columns>
+                              <TableColumn fx:id="Rtable_staffID" prefWidth="80.79998779296875" text="Staff ID" />
+                              <TableColumn fx:id="Rtable_name" prefWidth="102.39999389648438" text="Name" />
+                              <TableColumn fx:id="Rtable_gender" prefWidth="71.20001220703125" text="Gender" />
+                              <TableColumn fx:id="Rtable_marital" prefWidth="81.5999755859375" text="Marital" />
+                              <TableColumn fx:id="Rtable_dob" prefWidth="72.79998779296875" text="DOB" />
+                              <TableColumn fx:id="Rtable_phone" prefWidth="87.20001220703125" text="Phone" />
+                              <TableColumn fx:id="Rtable_nic" prefWidth="62.4000244140625" text="NIC" />
+                              <TableColumn fx:id="Rtable_address" minWidth="0.0" prefWidth="81.5999755859375" text="Address" />
+                              <TableColumn fx:id="Rtable_userName" prefWidth="80.79998779296875" text="UserName" />
+                              <TableColumn fx:id="Rtable_email" prefWidth="100.0" text="Email" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

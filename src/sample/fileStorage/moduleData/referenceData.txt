@@ -1,0 +1,7 @@
+1~Doctor Speciality~Allergists
+2~Doctor Speciality~Dermatologists
+3~Doctor Speciality~Ophthalmologists
+4~Complaint Types~Long Wait Times
+5~Complaint Types~Issues with Staff Members
+6~Complaint Types~Billing
+8~Complaint Types~Doctor

@@ -1,0 +1,21 @@
+private static void save(String fileName, String ext) {
+
+   File file = new File(fileName + "." + ext);
+   BufferedImage image = toBufferedImage(file);
+try {
+   ImageIO.write(image, ext, file);  // ignore returned boolean
+} catch(IOException e) {
+ System.out.println("Write error for " + file.getPath() +
+                               ": " + e.getMessage());
+  }
+ }
+
+read image from disk and show into label as
+
+ File file = new File("image.gif");
+     image = ImageIO.read(file);
+ JFrame frame = new JFrame();
+ JLabel label = new JLabel(new ImageIcon(image));
+ frame.getContentPane().add(label, BorderLayout.CENTER);
+ frame.pack();
+ frame.setVisible(true);

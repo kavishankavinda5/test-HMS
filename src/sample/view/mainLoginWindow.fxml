@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="508.0" prefWidth="888.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.MainLoginController">
+   <children>
+      <Label fx:id="mainLogin_DateTime" alignment="CENTER_RIGHT" layoutX="593.0" layoutY="14.0" prefHeight="30.0" prefWidth="295.0" />
+      <BorderPane prefHeight="500.0" prefWidth="295.0" style="-fx-background-color: #5eaaa8;">
+         <center>
+            <AnchorPane prefHeight="530.0" prefWidth="295.0" style="-fx-background-color: #1565c0;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="-6.0" layoutY="249.0" prefHeight="219.0" prefWidth="268.0" style="-fx-background-color: #000051;">
+                     <children>
+                        <AnchorPane layoutY="155.0" prefHeight="105.0" prefWidth="146.0" style="-fx-background-color: #90caf9;" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="34.0" layoutY="74.0" text="AROgya" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="53.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="111.0" layoutY="142.0" text="HOSPITAL" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="70.0" fitWidth="87.0" layoutX="34.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/common/icons8-leaf-96.png" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+         </center>
+      </BorderPane>
+      <Label layoutX="579.0" layoutY="68.0">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="359.0" layoutY="103.0" prefHeight="350.0" prefWidth="503.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="189.6" minHeight="10.0" prefHeight="170.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="170.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="mainLogin_receptionView" fitHeight="105.0" fitWidth="105.0" layoutX="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/icons8-front-desk-96.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="78.0" layoutY="125.0" prefHeight="20.0" prefWidth="78.0" text="Receptionist">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <ImageView fx:id="mainLogin_patientLogin" fitHeight="108.0" fitWidth="105.0" layoutX="68.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/icons8-person-128.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="99.0" layoutY="128.0" text="Patient">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="173.0" prefWidth="253.0" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="mainLogin_adminView" fitHeight="105.0" fitWidth="105.0" layoutX="65.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/icons8-admin-settings-male-96.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="98.0" layoutY="141.0" text="Admin">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="mainLogin_medicalOfficer" fitHeight="111.0" fitWidth="105.0" layoutX="74.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/icons/icons8-stethoscope-128.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="81.0" layoutY="141.0" text="Medical Officer">
+                     <font>
+                        <Font name="Bookshelf Symbol 7" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+      <Pane layoutX="295.0" layoutY="-1.0" prefHeight="90.0" prefWidth="197.0" style="-fx-background-color: #bbdefb;">
+         <children>
+            <Label layoutX="14.0" layoutY="26.0" text="Login As">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="38.0" fitWidth="39.0" layoutX="130.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/icons/common/icons8-next-page-128.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

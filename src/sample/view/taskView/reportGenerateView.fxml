@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="reportGenarator_boarderPane" prefHeight="700.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.taskControllers.ReportGenController">
+   <top>
+      <AnchorPane fx:id="reportGenarator_topTask" prefHeight="59.0" prefWidth="858.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="327.0" layoutY="11.0" prefHeight="40.0" prefWidth="199.0" text="REPORTS" textFill="#575757">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: offwhite;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="451.0" layoutY="402.0" prefHeight="27.0" prefWidth="100.0" text="Print Type">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="printDocument" layoutX="708.0" layoutY="400.0" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #009933;" text="Print" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXComboBox fx:id="reportGenarator_rType" layoutX="104.0" layoutY="35.0" prefHeight="26.0" prefWidth="237.0" promptText="Report Type" />
+            <TabPane fx:id="reportView_maintabPain" layoutX="4.0" layoutY="446.0" prefHeight="190.0" prefWidth="842.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="appointmentData_Ttab" text="Appointment Data">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane fx:id="reportV_appointmentPane" layoutX="4.0" layoutY="8.0" prefHeight="139.0" prefWidth="810.0">
+                                 <children>
+                                    <TableView fx:id="appTab_appointmentTable" prefHeight="140.0" prefWidth="811.0">
+                                      <columns>
+                                        <TableColumn fx:id="appT_appid" prefWidth="72.0" text="Appoint_id" />
+                                        <TableColumn fx:id="appT_appStatus" minWidth="0.0" prefWidth="125.0" text="Appointment Status" />
+                                          <TableColumn fx:id="appT_appTime" minWidth="0.0" prefWidth="52.0" text="Time" />
+                                          <TableColumn fx:id="appT_appdate" minWidth="0.0" prefWidth="53.0" text="Date" />
+                                          <TableColumn fx:id="appT_pateintName" minWidth="0.0" prefWidth="91.0" text="PatientName" />
+                                          <TableColumn fx:id="appT_pateintPhoneNumber" minWidth="0.0" prefWidth="102.0" text="Patient Phone" />
+                                          <TableColumn fx:id="appT_pateintNIC" minWidth="0.0" prefWidth="103.0" text="Patient NIC" />
+                                          <TableColumn fx:id="appT_medicalOfficer" minWidth="0.0" prefWidth="120.0" text="Medical Officer" />
+                                          <TableColumn fx:id="appT_medicalOfficerNIC" minWidth="0.0" prefWidth="94.0" text="Medical Officer" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab fx:id="appT_UserLogTableTab" text="UserLoging Log">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane fx:id="reportV_userLog_Pane" layoutX="4.0" layoutY="2.0" prefHeight="151.0" prefWidth="812.0">
+                                 <children>
+                                    <TableView fx:id="appView_userLogT" layoutY="3.0" prefHeight="150.0" prefWidth="832.0">
+                                      <columns>
+                                        <TableColumn fx:id="uLogTable_date" prefWidth="99.19997978210449" text="Date" />
+                                        <TableColumn fx:id="uLogTable_time" prefWidth="118.40006256103516" text="Time" />
+                                          <TableColumn fx:id="uLogTable_userName" prefWidth="180.0" text="UserName" />
+                                          <TableColumn fx:id="uLogTable_userRoll" prefWidth="233.60000610351562" text="UserRoll" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="patientLog_tableTab" text="Patient Login Credential">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane fx:id="reportV_patientLogindPane" layoutX="8.0" layoutY="6.0" prefHeight="135.0" prefWidth="806.0">
+                                 <children>
+                                    <TableView fx:id="appView_PatientDataT" prefHeight="134.0" prefWidth="801.0">
+                                      <columns>
+                                        <TableColumn fx:id="patientTable_pname" prefWidth="130.39999961853027" text="Patient Name" />
+                                        <TableColumn fx:id="patientTable_pUserName" prefWidth="183.99996948242188" text="UserName" />
+                                          <TableColumn fx:id="patientTable_pPassword" prefWidth="207.19998168945312" text="Password" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <JFXComboBox fx:id="printType_format" layoutX="547.0" layoutY="403.0" prefHeight="25.0" prefWidth="148.0" promptText="Select Report Type" />
+            <JFXButton fx:id="appointmentSearch" layoutX="123.0" layoutY="400.0" prefHeight="32.0" prefWidth="131.0" style="-fx-background-color: green;" text="Search Data" textFill="WHITE" />
+            <AnchorPane fx:id="medicalOfficerSection" layoutX="15.0" layoutY="181.0" prefHeight="101.0" prefWidth="395.0">
+               <children>
+                  <Label layoutX="10.0" layoutY="16.0" prefHeight="38.0" prefWidth="170.0" text="Select a Medical Officer" textFill="#575757">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="9.0" layoutY="44.0" prefHeight="21.0" prefWidth="143.0" text="(for an appointment report)" textFill="#575757">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="selectedDoctorName" layoutX="169.0" layoutY="31.0" prefHeight="25.0" prefWidth="162.0" />
+                  <JFXButton fx:id="addMedicalOfficer" layoutX="339.0" layoutY="32.0" prefHeight="25.0" prefWidth="43.0" style="-fx-background-color: blue;" text="Add" textFill="WHITE" />
+                  <Label fx:id="medicalOfficerID_selected" layoutX="166.0" layoutY="65.0" prefHeight="17.0" prefWidth="166.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="userTypeSection" layoutX="15.0" layoutY="272.0" prefHeight="97.0" prefWidth="379.0">
+               <children>
+                  <Label layoutX="10.0" layoutY="9.0" prefHeight="38.0" prefWidth="143.0" text="Select a User Type" textFill="#575757">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="userType" layoutX="169.0" layoutY="15.0" prefHeight="26.0" prefWidth="171.0" promptText="User" />
+                  <Label layoutX="11.0" layoutY="37.0" prefHeight="24.0" prefWidth="112.0" text="(for user log)" textFill="#575757">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TabPane fx:id="reportGen_tabPane" layoutX="410.0" layoutY="8.0" prefHeight="376.0" prefWidth="429.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="reportGen_tabPane_mediSelect" text="Medical Officer Select">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: lightGrey;">
+                           <children>
+                              <JFXButton fx:id="reportGen_doctorselectButton" layoutX="240.0" layoutY="21.0" prefHeight="26.0" prefWidth="168.0" style="-fx-background-color: silver;" text="Search Doctors" />
+                              <TableView fx:id="reportGen_docTable" layoutX="23.0" layoutY="61.0" prefHeight="162.0" prefWidth="386.0">
+                                 <columns>
+                                    <TableColumn fx:id="doctorSelectT_id" prefWidth="71.0" text="StaffID" />
+                                    <TableColumn fx:id="doctorSelectT_name" prefWidth="123.0" text="Doctor Name" />
+                                    <TableColumn fx:id="doctorSelectT_contactNumber" prefWidth="113.0" text="Contact Number" />
+                                    <TableColumn fx:id="doctorSelectT_nic" maxWidth="78.0" prefWidth="78.0" text="ID Number" />
+                                 </columns>
+                              </TableView>
+                              <Label fx:id="reportGen_doctorShow" layoutX="19.0" layoutY="229.0" prefHeight="68.0" prefWidth="388.0" />
+                              <JFXButton fx:id="reportGen_selectDoc" layoutX="110.0" layoutY="305.0" prefHeight="25.0" prefWidth="221.0" style="-fx-background-color: #9f5f80;" text="Select Doctor" textFill="WHITE" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <AnchorPane fx:id="datePickerSection" layoutX="17.0" layoutY="72.0" prefHeight="118.0" prefWidth="375.0">
+               <children>
+                  <Label layoutX="82.0" layoutY="19.0" prefHeight="12.0" prefWidth="59.0" text="Date" textFill="#575757">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="reportGenarator_dateFrom" layoutX="153.0" layoutY="19.0" prefHeight="26.0" prefWidth="144.0" promptText="Select" />
+                  <DatePicker fx:id="reportGenarator_dateTo" layoutX="153.0" layoutY="56.0" prefHeight="26.0" prefWidth="144.0" promptText="Select" />
+                  <Label alignment="BOTTOM_LEFT" layoutX="82.0" layoutY="56.0" prefHeight="24.0" prefWidth="38.0" text="To" textFill="#575757">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+   </center>
+</BorderPane>

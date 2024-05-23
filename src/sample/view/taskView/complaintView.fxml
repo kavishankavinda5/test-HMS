@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.taskControllers.ComplaintViewController">
+   <children>
+      <AnchorPane fx:id="vedComplaintView" prefHeight="475.0" prefWidth="850.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="35.0" layoutY="82.0" prefHeight="25.0" prefWidth="121.0" text="Complaint Type" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="125.0" text="Complaint By">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="173.0" text="Phone Number">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="353.0" text="Attachment">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="226.0" text="Description">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="282.0" text="Note">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="Cview_complaintDropDown" layoutX="182.0" layoutY="83.0" prefHeight="20.0" prefWidth="314.0" promptText="select" style="-fx-background-color: #f8f1f1;" />
+            <JFXTextArea fx:id="Cview_note" layoutX="181.0" layoutY="278.0" prefHeight="62.0" prefWidth="314.0" style="-fx-background-color: e8e8e8;" />
+            <JFXTextField fx:id="Cview_complaitBy" layoutX="182.0" layoutY="124.0" prefHeight="26.0" prefWidth="314.0" style="-fx-background-color: #f8f1f1;" />
+            <JFXTextField fx:id="Cview_phoneNumber" layoutX="182.0" layoutY="174.0" prefHeight="26.0" prefWidth="314.0" style="-fx-background-color: #f8f1f1;" />
+            <Label alignment="CENTER" layoutX="283.0" layoutY="9.0" prefHeight="40.0" prefWidth="221.0" text="COMPLAINTS">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Cview_idSearchFiled" layoutX="546.0" layoutY="20.0" prefHeight="26.0" prefWidth="150.0" promptText="Complaint ID" />
+            <JFXTextField fx:id="Cview_description" layoutX="182.0" layoutY="227.0" prefHeight="26.0" prefWidth="314.0" style="-fx-background-color: #f8f1f1;" />
+            <Label layoutX="30.0" layoutY="404.0" text="Action Taken">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <JFXTextArea fx:id="Cview_actionTaken" layoutX="181.0" layoutY="403.0" prefHeight="40.0" prefWidth="314.0" style="-fx-background-color: #f8f1f1;" />
+            <Label fx:id="Cview_DateCurrent" layoutX="20.0" layoutY="13.0" prefHeight="32.0" prefWidth="243.0" style="-fx-background-color: #f8f1f1;" text="Date" />
+            <JFXButton fx:id="Cview_searchButton" layoutX="708.0" layoutY="20.0" prefHeight="26.0" prefWidth="110.0" ripplerFill="BLACK" style="-fx-background-color: silver;" text="Search" textFill="#030000" wrapText="true" />
+            <JFXButton fx:id="Cview_uploadFile" layoutX="182.0" layoutY="351.0" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: silver;" text="Upload File" />
+            <AnchorPane layoutX="518.0" layoutY="61.0" prefHeight="374.0" prefWidth="314.0">
+               <children>
+                  <JFXTextArea fx:id="Cview_displayArea" editable="false" layoutX="22.0" layoutY="20.0" prefHeight="339.0" prefWidth="272.0" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="37.0" layoutY="58.0" text="Complaint ID :" />
+            <Label fx:id="Cview_complaintID" layoutX="129.0" layoutY="58.0" prefHeight="18.0" prefWidth="82.0" />
+            <Label fx:id="CView_UploadFile_Path" layoutX="182.0" layoutY="383.0" prefHeight="15.0" prefWidth="314.0" textFill="#3300ff">
+               <font>
+                  <Font size="7.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="openDocument" layoutX="283.0" layoutY="351.0" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #00eeff;" text="open" />
+            <Label fx:id="noDocument" alignment="CENTER" layoutX="283.0" layoutY="351.0" prefHeight="26.0" prefWidth="80.0" text="No Document" textFill="RED" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="473.0" prefHeight="40.0" prefWidth="850.0" style="-fx-background-color: f3f2da;">
+         <children>
+            <HBox layoutX="159.0" layoutY="4.0">
+               <children>
+                  <JFXButton fx:id="Cview_addBtn" contentDisplay="CENTER" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #1e90ff;" text="Add" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="Cview_updateBtn" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #009933;" text="Update" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="Cview_deleteBtn" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #cc0000;" text="Delete" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="Cview_viewAllBtn" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: gray;" text="View All" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="Cview_resetBtn" prefHeight="32.0" prefWidth="100.0" style="-fx-background-color: #ff8080;" text="Reset" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="505.0" prefHeight="200.0" prefWidth="850.0">
+         <children>
+            <TableView fx:id="Cview_mainTable" layoutX="14.0" layoutY="8.0" prefHeight="185.0" prefWidth="823.0" style="-fx-background-color: e8e8e8;">
+               <columns>
+                  <TableColumn fx:id="Cview_Tid" prefWidth="47.20001411437988" text="ID" />
+                  <TableColumn fx:id="Cview_Tdate" prefWidth="85.5999984741211" text="Date" />
+                  <TableColumn fx:id="Cview_Tcomplainttype" prefWidth="121.5999755859375" text="Complaint Type" />
+                  <TableColumn fx:id="Cview_complaintBy" prefWidth="101.60003662109375" text="Complaint By" />
+                  <TableColumn fx:id="Cview_TphoneNumber" prefWidth="101.0" text="Phone Number" />
+                  <TableColumn fx:id="Cview_Tdescription" prefWidth="85.0" text="Description" />
+                  <TableColumn fx:id="Cview_Tnote" prefWidth="77.0" text="Note" />
+                  <TableColumn fx:id="Cview_Tattachment" prefWidth="99.20001220703125" text="Attachment" />
+                  <TableColumn fx:id="Cview_TactionTaken" prefWidth="177.5999755859375" text="Action Taken" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="850.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.taskControllers.AppointmentViewController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="850.0">
+         <children>
+            <TableView fx:id="appointmentView_mainTable" layoutX="-5.0" layoutY="486.0" prefHeight="200.0" prefWidth="860.0" style="-fx-background-color: #e8e8e8;" />
+            <AnchorPane layoutX="-10.0" layoutY="443.0" prefHeight="40.0" prefWidth="860.0" style="-fx-background-color: #f3f2da;">
+               <children>
+                  <HBox fx:id="appointView_HobxButtons" layoutX="59.0" layoutY="6.0" prefHeight="26.0" prefWidth="727.0">
+                     <children>
+                        <JFXButton fx:id="appointmentView_addAppointment" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #1e90ff;" text="Add" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin></JFXButton>
+                        <JFXButton fx:id="appointmentView_updateAppoin" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #009933;" text="Update" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin></JFXButton>
+                        <JFXButton fx:id="appointmentView_deleteAppoin" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #cc0000;" text="Delete" textFill="WHITE">
+                           <padding>
+                              <Insets right="5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin></JFXButton>
+                        <JFXButton fx:id="appointmentView_viewAllAppoin" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: grey;" text="View All" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin></JFXButton>
+                        <JFXButton fx:id="appointmentView_viewPending" layoutX="250.0" layoutY="10.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #b088f9;" text="View Pending" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin></JFXButton>
+                        <JFXButton fx:id="appointmentView_viewApproved" layoutX="330.0" layoutY="10.0" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #b088f9;" text="View Approved" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="appointmentView_viewCompleted" layoutX="428.0" layoutY="10.0" prefHeight="26.0" prefWidth="109.0" style="-fx-background-color: #b088f9;" text="View Completed" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="appointmentView_resetViewBtn" layoutX="321.0" layoutY="10.0" prefHeight="26.0" prefWidth="102.0" style="-fx-background-color: #c06af3;" text="Reset" textFill="WHITE" />
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="446.0" prefWidth="850.0" style="-fx-background-color: white;">
+               <children>
+                  <AnchorPane fx:id="appointmentView_mainPane" layoutX="-7.0" layoutY="2.0" prefHeight="446.0" prefWidth="850.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="29.0" layoutY="225.0" prefHeight="26.0" prefWidth="46.0" text="Paitient" />
+                        <JFXTextField fx:id="appointmentView_patient" editable="false" layoutX="133.0" layoutY="225.0" prefHeight="26.0" prefWidth="262.0" style="-fx-background-color: e8e8e8;" />
+                        <Label layoutX="30.0" layoutY="267.0" prefHeight="26.0" prefWidth="90.0" text="Medical Officer" />
+                        <JFXTextField fx:id="appointmentView_doctor" editable="false" layoutX="133.0" layoutY="267.0" prefHeight="26.0" prefWidth="262.0" style="-fx-background-color: e8e8e8;" />
+                        <Label layoutX="29.0" layoutY="330.0" prefHeight="26.0" prefWidth="62.0" text="Symtoms" />
+                        <JFXTextArea fx:id="appointmentView_symtoms" layoutX="133.0" layoutY="320.0" prefHeight="110.0" prefWidth="346.0" style="-fx-background-color: e8e8e8;" />
+                        <Label layoutX="29.0" layoutY="87.0" prefHeight="26.0" prefWidth="45.0" text="Date" />
+                        <Label layoutX="29.0" layoutY="129.0" prefHeight="26.0" prefWidth="45.0" text="Time" />
+                        <Label layoutX="30.0" layoutY="176.0" prefHeight="26.0" prefWidth="74.0" text="Status" />
+                        <JFXComboBox fx:id="appointmentView_status" layoutX="133.0" layoutY="176.0" prefHeight="26.0" prefWidth="171.0" style="-fx-background-color: e8e8e8;" />
+                        <DatePicker fx:id="appointmentView_APdate" layoutX="131.0" layoutY="87.0" prefHeight="26.0" prefWidth="171.0" style="-fx-background-color: e8e8e8;" />
+                        <AnchorPane layoutY="-3.0" prefHeight="54.0" prefWidth="498.0">
+                           <children>
+                              <TextField fx:id="appointmentView_searchID" layoutX="14.0" layoutY="8.0" prefHeight="26.0" prefWidth="149.0" promptText="Appointment No" />
+                              <JFXButton fx:id="appointmentView_searchButton" layoutX="172.0" layoutY="8.0" prefHeight="26.0" prefWidth="62.0" style="-fx-background-color: silver;" text="Search" />
+                              <Label alignment="CENTER" layoutX="249.0" layoutY="7.0" prefHeight="40.0" prefWidth="238.0" text="APPOINTMENTS">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <JFXTextField fx:id="appointmentView_timeHour" alignment="CENTER" layoutX="133.0" layoutY="129.0" prefHeight="26.0" prefWidth="80.0" promptText="HH" style="-fx-background-color: e8e8e8;" />
+                        <JFXTextField fx:id="appointmentView_timeMinute" alignment="CENTER" layoutX="222.0" layoutY="129.0" prefHeight="26.0" prefWidth="80.0" promptText="MM" style="-fx-background-color: e8e8e8;" />
+                        <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="406.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/icons/common/icons8-add-user-male-256.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="26.0" fitWidth="34.0" layoutX="406.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/icons/common/icons8-medical-doctor-150.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton fx:id="appointmentView_addPatientBy" layoutX="432.0" layoutY="226.0" style="-fx-background-color: #fca3cc;" text="Add" />
+                        <JFXButton fx:id="appointmentView_addDoctorBy" layoutX="432.0" layoutY="268.0" style="-fx-background-color: #fca3cc;" text="Add" />
+                        <TabPane fx:id="appointmentView_mainTabPane" layoutX="492.0" layoutY="9.0" prefHeight="422.0" prefWidth="346.0" style="-fx-background-color: #d8ac9c;" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab fx:id="appointmentView_apDetailsTab" text="Details">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #f4eeed;">
+                                       <children>
+                                          <JFXTextArea fx:id="appointmentView_appointmentDetails" editable="false" layoutX="32.0" layoutY="14.0" prefHeight="346.0" prefWidth="282.0" unFocusColor="WHITE" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab fx:id="appointmentView_patientTab" text="Patient">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <AnchorPane prefHeight="385.0" prefWidth="346.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <Label layoutX="14.0" layoutY="25.0" text="Patient ID" />
+                                                <Pane fx:id="appointmentView_patientDetails" layoutX="15.0" layoutY="71.0" prefHeight="300.0" prefWidth="316.0">
+                                                   <children>
+                                                      <JFXButton fx:id="appointmentView_selectPatient" layoutX="40.0" layoutY="248.0" prefHeight="25.0" prefWidth="235.0" style="-fx-background-color: #335d2d;" text="Select Patient" textFill="WHITE" />
+                                                      <Label fx:id="appointmentView_patientShow" layoutX="11.0" layoutY="10.0" prefHeight="180.0" prefWidth="294.0" style="-fx-background-color: white;" />
+                                                   </children>
+                                                </Pane>
+                                                <JFXTextField fx:id="appointmentView_patientID" layoutX="79.0" layoutY="21.0" prefHeight="25.0" prefWidth="165.0" style="-fx-background-color: #d2f6c5;" unFocusColor="WHITE" />
+                                                <JFXButton fx:id="appointmentView_patientSearch" layoutX="253.0" layoutY="21.0" prefHeight="25.0" prefWidth="74.0" style="-fx-background-color: #da9ff9;" text="Search" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                              <Tab fx:id="appointmentView_doctorTab" text="Doctor Specility">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <AnchorPane layoutY="-2.0" prefHeight="385.0" prefWidth="346.0" style="-fx-background-color: white;">
+                                             <children>
+                                                <JFXComboBox fx:id="appointmentView_doctorSpecDrop" focusColor="#190808" layoutX="18.0" layoutY="22.0" prefHeight="26.0" prefWidth="184.0" promptText="Select Speciality" style="-fx-background-color: #efd9d1;" unFocusColor="WHITE" />
+                                                <TableView fx:id="appointmentView_docTable" layoutX="18.0" layoutY="61.0" prefHeight="151.0" prefWidth="316.0" />
+                                                <Pane fx:id="appointmentView_DocDetails" layoutX="18.0" layoutY="222.0" prefHeight="153.0" prefWidth="316.0">
+                                                   <children>
+                                                      <JFXButton fx:id="appointmentView_selectDoc" layoutX="48.0" layoutY="115.0" prefHeight="25.0" prefWidth="221.0" style="-fx-background-color: #9f5f80;" text="Select Doctor" textFill="WHITE" />
+                                                      <Label fx:id="appointmentView_doctorShow" layoutX="13.0" layoutY="9.0" prefHeight="102.0" prefWidth="290.0" />
+                                                   </children>
+                                                </Pane>
+                                                <JFXButton fx:id="appointmentView_doctorselectButton" layoutX="227.0" layoutY="23.0" prefHeight="26.0" prefWidth="95.0" style="-fx-background-color: silver;" text="search" />
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                        <Label layoutX="29.0" layoutY="58.0" prefHeight="18.0" prefWidth="98.0" text="Appointment ID :" />
+                        <Label fx:id="appointmentView_apIDLabel" layoutX="131.0" layoutY="58.0" prefHeight="18.0" prefWidth="98.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

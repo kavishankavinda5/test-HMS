@@ -1,0 +1,58 @@
+//        boolean found = false;
+//        Patient searchedPatient = new Patient();
+//
+//        try{
+//            String userRoll = null;
+//            String name=null,address =null;
+//            String gender=null,marital=null,dob=null,phonenumber=null,idcardNumber=null,userName=null,password=null,blood=null,allergy =null;
+//            scanner = new Scanner(new File(filepath));
+//            scanner.useDelimiter("[,\n]");
+//
+//            while (scanner.hasNext() && !found){
+//
+//                userRoll= scanner.next();
+//                name =scanner.next();
+//                gender =scanner.next();
+//                marital =scanner.next();
+//                dob =scanner.next();
+//                phonenumber = scanner.next();
+//                idcardNumber = scanner.next();
+//                address = scanner.next();
+//                userName =scanner.next();
+//                password=scanner.next();
+//                blood =scanner.next();
+//                allergy =scanner.next();
+//
+//                if (idcardNumber.equals(seachTerm) || ( userName.equals(seachTerm))&&password.equals(userPassword)){
+//                    found = true;
+//                    System.out.println("patient found");
+//                }
+//            }
+//            if (found){
+//                searchedPatient.setUserRoll(getUserRoll(userRoll));
+//                searchedPatient.setName(name);
+//                searchedPatient.setGender(getGender(gender));
+//                searchedPatient.setMaritalStatus(marital);
+//                searchedPatient.setDob(getLocalDatefromString(dob));
+//                searchedPatient.setPhoneNumber(phonenumber);
+//                searchedPatient.setIdCardNumber(idcardNumber);
+//                searchedPatient.setAddress(address);
+//                searchedPatient.setUserName(userName);
+//                searchedPatient.setUserPassword(password);
+//                searchedPatient.setBloodGroup(getBloodGroup(blood));
+//                searchedPatient.setAllergies(allergy);
+//
+//                System.out.println(searchedPatient.toString());
+//
+//
+//            }else {
+//                System.out.println("record not found");
+//            }
+//
+//
+//
+//        } catch (FileNotFoundException e) {
+//            e.printStackTrace();
+//        }
+//
+//return searchedPatient;
